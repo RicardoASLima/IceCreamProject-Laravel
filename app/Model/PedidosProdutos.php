@@ -26,6 +26,19 @@ class PedidosProdutos extends Model
 
     }
 
+    public function store($data, $idPedido){
+
+        $this->fill([
+            'id_produto' => $data['id_produto'],
+            'id_pedidos' => $idPedido,
+            'quantidade' => $data['quantidade'],
+            'valor_total' => $data['valor_total']
+        ]);
+
+        $this->save();
+
+    }
+
     use SoftDeletes;
 
     //protected $fillable = ['status', 'envia_cozinha'];
