@@ -12,7 +12,7 @@ class Pedidos extends Model
 
     public function mesa(){
 
-        return $this->belongsTo(Mesa::class);
+        return $this->belongsTo(Mesa::class, 'id', 'id_mesa');
 
     }
 

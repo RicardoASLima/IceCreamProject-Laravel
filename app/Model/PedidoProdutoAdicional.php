@@ -10,7 +10,7 @@ class PedidoProdutoAdicional extends Model
 
     public function pedidosProdutos(){
 
-        return $this->belongsTo(PedidosProdutos::class);
+        return $this->belongsTo(PedidosProdutos::class, 'id', 'id_pedido_produto');
 
     }
 

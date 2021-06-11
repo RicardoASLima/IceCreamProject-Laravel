@@ -10,7 +10,7 @@ class PedidosProdutos extends Model
 
     public function pedidos(){
 
-        return $this->belongsTo(Pedidos::class);
+        return $this->belongsTo(Pedidos::class, 'id', 'id_pedidos');
 
     }
 
@@ -22,7 +22,7 @@ class PedidosProdutos extends Model
 
     public function produto(){
 
-        return $this->belongsTo(Produto::class);
+        return $this->belongsTo(Produto::class, 'id', 'id_produto');
 
     }
 
