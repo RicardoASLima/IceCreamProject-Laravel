@@ -12,13 +12,13 @@ class Pedidos extends Model
 
     public function mesa(){
 
-        return $this->belongsTo(Mesa::class, 'id', 'id_mesa');
+        return $this->belongsTo(Mesa::class);
 
     }
 
     public function pedidosProdutos(){
 
-        return $this->hasMany(PedidosProdutos::class);
+        return $this->hasMany(PedidosProdutos::class, 'id', 'id_pedidos');
 
     }
 
