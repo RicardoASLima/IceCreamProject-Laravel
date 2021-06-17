@@ -26,5 +26,8 @@ Route::get('produtos/adicionais',  'ProductController@produtosAdicionais'); //ad
 Route::get('pedidos/{pedido}',  'OrderController@getProdutoPedidos'); //lista de produtos pedidos
 Route::post('pedidos/{pedido}/add',  'OrderController@addPedidos'); //adicionar o pedido
 
+Route::get('comanda',  'AllGetController@getComanda'); //lista de produtos pedidos
+Route::get('listapedidos',  'AllGetController@getListaPedidos'); //adicionar o pedido
+
 //Route::get('pedido/{pedido}/produtos',  'OrderController@getProducts');
 
